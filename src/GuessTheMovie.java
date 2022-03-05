@@ -2,7 +2,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class GuessTheMovie {
-
     //check if players letter matches any letter in the movie title
     private static boolean isMatch(String movie, String a){
     String[] title = movie.split("");
@@ -14,7 +13,6 @@ public class GuessTheMovie {
         }
     return false;
     }
-
     //if the letter is in the word - the underscore will be replaced with the correct letter.
     public static String playerProgress(String movie, String playerGuess, String underscored){
         StringBuilder underScore = new StringBuilder(underscored);
@@ -27,10 +25,8 @@ public class GuessTheMovie {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-
         GameStatus gameStatus = new GameStatus(10,MovieData.selectRandomMovie(),"");
         GameEngine.gamePlay(gameStatus);
         WinCondition.playerWinStatus(gameStatus.getPlayerPoints(), gameStatus.getCurrentMovieTitle(), gameStatus.getTitleWithUnderscores());
-
     }
 }

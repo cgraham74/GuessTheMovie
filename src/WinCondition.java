@@ -8,5 +8,4 @@ public class WinCondition {
             System.out.println("You WIN!!!!");
         }
     }
-
 }
